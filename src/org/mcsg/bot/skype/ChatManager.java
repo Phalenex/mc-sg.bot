@@ -135,7 +135,7 @@ public class ChatManager {
       File file2 = new File(script);
       {
         PrintWriter pw1 = new PrintWriter(new FileWriter(file2));
-        pw1.println("cat "+paste+" | pastebinit -a \"MC-SG.BOT Output\"");
+        pw1.println("cat "+paste+" | pastebinit -a \"BOT Output\"");
         pw1.flush();
         pw1.close();
       }
