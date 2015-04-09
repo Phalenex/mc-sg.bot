@@ -83,7 +83,7 @@ public class Bot {
   public static void main(String[] args) {
 
 
-    System.out.println("Starting MC-SG.BOT version "+version);
+    System.out.println("Starting BOT version "+version);
     System.out.println("Settings File: "+Settings.file.getAbsolutePath());
     System.out.println("Permissions Files: "+Permissions.pfile.getAbsolutePath());
 
@@ -98,8 +98,8 @@ public class Bot {
         for(Chat chat : Skype.getAllChats()){
           if(chat.getId().equals(chatid)){
             defaultChat = chat;
-            chat.send("Starting MC-SG.BOT version "+version);
-            chat.send("/topic MC-SG BOT  v"+version);
+            chat.send("Starting BOT version "+version);
+            chat.send("/me BOT  v"+version);
 
             int a = 0;
             for(Friend t : Skype.getContactList().getAllUserWaitingForAuthorization()){
@@ -192,8 +192,8 @@ public class Bot {
 
           if(command.equalsIgnoreCase("help") || command.equalsIgnoreCase("halp")){
             StringBuilder sb = new StringBuilder();
-            received.getChat().send("--- [ MC-SG Bot Help ] ---");
-            sb.append("#MC-SG.BOT Commands Reference \n");
+            received.getChat().send("--- [ Bot Help ] ---");
+            sb.append("#BOT Commands Reference \n");
             for(String com : commands.keySet()){
               String name = commands.get(com).getUsage();
               if(name != null){
